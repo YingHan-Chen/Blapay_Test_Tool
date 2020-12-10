@@ -1,0 +1,8 @@
+.result-row{
+  display: flex;
+  border-radius: 50%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-origin: padding-box;
+  margin: 5px;
+}
