@@ -186,12 +186,12 @@ async function sleep(time : number) : Promise<void>{
     
     for(let j=0;j<density;j++){
       data[i][j] = await api.get_account_info(accounts[i][j].id)
-     // statement.account_info(accounts[i][j])
+      statement.account_info(accounts[i][j])
     }
   }
   aa = {
-    row : density,
-    col : level,
+    row : level,
+    col : density,
     data : data,
     time : durations
     
@@ -208,8 +208,8 @@ export const randomTxn = async (density: number, count: number, amount: number) 
   let accounts = new Array(density)
   for(let i=0 ;i<density;i++){
       accounts[i] = await api.create_account()
-      statement.account_info(accounts[i])
-  }git clone https://github.com/microsoft/MCW-Cloud-native-applications.git
+      statement.account_info(accounts[i]);
+  }
 
   // deposit basic coins
     for(let j=0;j<density;j++){

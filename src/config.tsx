@@ -11,5 +11,5 @@ export const NANO_FAUCET = {
 }
 
 export const BLA_FAUCET = {
-    account: `bla_00e5ea2fc3384c61d9152d9fb888e7b02931bb01`
+    account: `bla_537f4f5545aec3834ef25200b350e58397e1d0ab`
 }

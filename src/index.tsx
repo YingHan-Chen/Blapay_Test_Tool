@@ -16,6 +16,10 @@ interface IState{
 export class Game extends React.Component<any, IState> {
   constructor(props:any){
     super(props);
+    this.handleDensityChange = this.handleDensityChange.bind(this);
+    this.handleLevelChange = this.handleLevelChange.bind(this);
+    this.handleAmountChange = this.handleAmountChange.bind(this);
+    
     this.state = {
       density : 2,
       level : 2,
@@ -23,7 +27,9 @@ export class Game extends React.Component<any, IState> {
     };
   }
   handleDensityChange(e: React.ChangeEvent<HTMLInputElement>){
-    this.setState({density : Number(e.target.value)});
+    var value : number = Number(e.target.value)
+    this.setState({density : value});
+    
   }
   handleLevelChange(event : any){
     this.setState({level : event.target.value});
